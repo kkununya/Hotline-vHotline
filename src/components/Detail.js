@@ -8,9 +8,7 @@ class Detail extends Component {
   }
   render() {
     let messageNodes = this.props.message.map((mes) => {
-      console.log(mes);
       return (
-        <div>
           <tr key={mes}>
             <td style={{ width: '80%', verticalAlign: 'middle'}} className="is-fullwidth has-text-centered">
               {mes}
@@ -21,7 +19,6 @@ class Detail extends Component {
               </a>
             </td>
           </tr>
-        </div>
       )
     });
     return (

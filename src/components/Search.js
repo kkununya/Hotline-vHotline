@@ -22,7 +22,6 @@ class Search extends Component {
         )
       });
       let { selectedDistrict } = this.state
-      console.log(messageNodes.messagesVal);
     return (
       <div className="columns is-mobile is-centered selectType">
         <div className="select is-rounded">

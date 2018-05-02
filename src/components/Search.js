@@ -5,7 +5,7 @@ class Search extends Component {
   constructor(props){
     super(props);
     this.state = {
-      selectedDistrict: 'สายด่วนสำหรับแจ้งเหตุด่วนเหตุร้าย'
+      selectedDistrict: 'สายด่วนติดต่อธนาคาร สถาบันการเงิน'
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -22,6 +22,7 @@ class Search extends Component {
         )
       });
       let { selectedDistrict } = this.state
+      console.log(messageNodes.messagesVal);
     return (
       <div className="columns is-mobile is-centered selectType">
         <div className="select is-rounded">

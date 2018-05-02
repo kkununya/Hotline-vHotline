@@ -7,7 +7,7 @@ class List extends Component {
     super(props);
     this.state = {
       messages: [],
-      district: 'สายด่วนสำหรับแจ้งเหตุด่วนเหตุร้าย'
+      district: 'สายด่วนติดต่อธนาคาร สถาบันการเงิน'
     };
       let app = this.props.db.database().ref('สายด่วนฉุกเฉิน/'+this.state.district);
       app.on('value', snapshot => {
@@ -44,7 +44,8 @@ class List extends Component {
         return (
             <div className="card" key={message.key}>
               <div className="card-content">
-                <Detail message = {message[0]} name = {message.key}/>
+                <div>{message.key}</div><br/>
+                <Detail message = {message}/>
               </div>
             </div>
           )
